@@ -1,5 +1,6 @@
 package com.phegon.FoodApp.auth_users.entity;
 
+import com.phegon.FoodApp.cart.entity.Cart;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
