@@ -20,3 +20,14 @@ public class ModelMapperConfig {
         return modelMapper;
     }
 }
+
+//@Configuration → this class is for setup
+//class ModelMapperConfig → setup class name
+//@Bean → Spring should store the returned object
+//public ModelMapper modelMapper() → a method that returns a ModelMapper object
+//new ModelMapper() → create the object
+//getConfiguration() → open its settings
+//setFieldMatchingEnabled(true) → allow automatic field matching
+//setFieldAccessLevel(PRIVATE) → allow access to private fields
+//setMatchingStrategy(STANDARD) → use normal matching rules
+//return modelMapper → give the configured object to Spring
