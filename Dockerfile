@@ -39,3 +39,4 @@ EXPOSE 8090
 
 # Define the command to run the application when the container starts
 ENTRYPOINT ["java","-jar","app.jar"]
+
