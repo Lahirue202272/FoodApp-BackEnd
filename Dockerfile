@@ -20,7 +20,6 @@ COPY src ./src
 # Package the Spring Boot application into a JAR file
 RUN mvn clean package -Dmaven.test.skip=true
 
-
 #Stage 2 is to build a production ready image and run
 #set up the runtime environemnt
 FROM eclipse-temurin:21-jre-jammy
