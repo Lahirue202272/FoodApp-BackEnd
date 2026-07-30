@@ -51,6 +51,6 @@ jobs:
         uses: aws-actions/amazon-ecs-deploy-task-definition@v2
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
-          service: foodapp-backend-service
+          service: foodapp-backend-task-definition-service-4iziave9
           cluster: foodapp-backend-dev
           wait-for-service-stability: true
