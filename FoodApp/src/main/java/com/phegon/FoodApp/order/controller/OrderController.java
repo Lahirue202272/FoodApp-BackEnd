@@ -52,7 +52,7 @@ public class OrderController {
 
     @PutMapping("/update")
     @PreAuthorize("hasAuthority('ADMIN')")
-    public ResponseEntity<Response<OrderDTO>> updateOrderStatus(OrderDTO orderDTO){
+    public ResponseEntity<Response<OrderDTO>> updateOrderStatus(@RequestBody OrderDTO orderDTO){
         return ResponseEntity.ok(orderService.updateOrderStatus(orderDTO));
     }
 
@@ -61,4 +61,5 @@ public class OrderController {
     public ResponseEntity<Response<Long>> countUniqueCustomers() {
         return ResponseEntity.ok(orderService.countUniqueCustomers());
     }
+
 }
