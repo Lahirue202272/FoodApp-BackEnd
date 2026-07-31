@@ -12,6 +12,18 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v4
 
+      - name: Inject secrets into task definition
+        run: |
+          sed -i "s|PLACEHOLDER_DB_URL|${{ secrets.PROD_DB_URL }}|g" foodapp-backend-task-definition.json
+          sed -i "s|PLACEHOLDER_DB_USERNAME|${{ secrets.PROD_DB_USERNAME }}|g" foodapp-backend-task-definition.json
+          sed -i "s|PLACEHOLDER_DB_PASSWORD|${{ secrets.PROD_DB_PASSWORD }}|g" foodapp-backend-task-definition.json
+          sed -i "s|PLACEHOLDER_JWT_SECRET|${{ secrets.JWT_SECRET }}|g" foodapp-backend-task-definition.json
+          sed -i "s|PLACEHOLDER_MAIL_USER|${{ secrets.MAIL_USER }}|g" foodapp-backend-task-definition.json
+          sed -i "s|PLACEHOLDER_MAIL_PASS|${{ secrets.MAIL_PASS }}|g" foodapp-backend-task-definition.json
+          sed -i "s|PLACEHOLDER_BUCKET_NAME|${{ secrets.AWS_BUCKET_NAME }}|g" foodapp-backend-task-definition.json
+          sed -i "s|PLACEHOLDER_ACCESS_KEY|${{ secrets.AWS_ACCESS_KEY }}|g" foodapp-backend-task-definition.json
+          sed -i "s|PLACEHOLDER_SECRET_KEY|${{ secrets.AWS_SECRETE_KEY }}|g" foodapp-backend-task-definition.json
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:

@@ -15,7 +15,17 @@
                 }
             ],
             "essential": true,
-            "environment": [],
+            "environment": [
+                { "name": "PROD_DB_URL", "value": "PLACEHOLDER_DB_URL" },
+                { "name": "PROD_DB_USERNAME", "value": "PLACEHOLDER_DB_USERNAME" },
+                { "name": "PROD_DB_PASSWORD", "value": "PLACEHOLDER_DB_PASSWORD" },
+                { "name": "JWT_SECRET", "value": "PLACEHOLDER_JWT_SECRET" },
+                { "name": "MAIL_USER", "value": "PLACEHOLDER_MAIL_USER" },
+                { "name": "MAIL_PASS", "value": "PLACEHOLDER_MAIL_PASS" },
+                { "name": "AWS_BUCKET_NAME", "value": "PLACEHOLDER_BUCKET_NAME" },
+                { "name": "AWS_ACCESS_KEY", "value": "PLACEHOLDER_ACCESS_KEY" },
+                { "name": "AWS_SECRETE_KEY", "value": "PLACEHOLDER_SECRET_KEY" }
+            ],
             "environmentFiles": [],
             "mountPoints": [],
             "volumesFrom": [],
